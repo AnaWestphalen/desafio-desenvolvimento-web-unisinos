@@ -6,24 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AccessMonitor</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/pagina.css">
+    <script src="https://kit.fontawesome.com/e1d8385e01.js" crossorigin="anonymous"></script>
   </head>
-
-  <body>
+  <container>
     <header>
       <div class="cabecalho">
         <h1 class="nomeSite">AccessMonitor</h1>
         <img class="imagemUni" src="imagens/unisinos.png">
       </div>
+      <div class="caixa">
+        <nav>
+          <ul>
+            <li style="--clr:#ff6493">
+              <a href="pagina3.html" target="_blank" data-text="&nbsp;Visual">&nbsp;Visual&nbsp;</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
+    <br>
     <main>
-
+      <form>
+        <label for="endereco"><strong>Digite aqui o endereço do problema de acessibilidade visual que você quer reportar:</strong></label>
+        <br>
+        <input type="text" id="endereco" name="endereco" placeholder="Endereço">
+      </form>
+      <div class="bigbox">
+        <div class="smallbox">
+          <section class="formulario">
+            <form>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  <strong>Ausência de piso podotáctil</strong>
+                </label>
+              </div>
+              <br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  <strong>Piso podotáctil danificado</strong>
+                </label>
+              </div>
+              <br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  <strong>Ausência de pisos de alerta</strong>
+                </label>
+              </div>
+              <br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  <strong>Calçada esburacada</strong>
+                </label>
+              </div>
+              <br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  <strong>Calçada obstruída</strong>
+                </label>
+              </div>
+              <br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  <strong>Ausência de marcações em braile no transporte público</strong>
+                </label>
+              </div>
+            </form>
+          </section>
+        </div>
+        <div class="comentario">
+          <label for="comentario">
+            <h2><strong>Informações adicionais:</strong></h2>
+          </label>
+          <br>
+          <aside class="formulario">
+            <textarea id="comentario" name="comentario"
+              placeholder="Escreva aqui qualquer informação adicional, que você ache importante, sobre o problema reportado:"></textarea>
+          </aside>
+        </div>
+      </div>
+      <div class="send">
+        <a class="btn-flat" href="pagina5.html">Enviar</a>
+      </div>
     </main>
-
     <footer>
-      <p>Created by <a class="linkedin" href="https://www.linkedin.com/in/alexandre-link-73b8791ab/"
-          target="_blank">Alexandre Link</a> (UNISINOS)</p>
+      <div class="container">
+        <p>Created by Alexandre, Ana Paula, Christopher e Felipi</p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/AnaWestphalen/desafio-desenvolvimento-web-unisinos" target="_blank"><i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
     </footer>
-  </body>
+  </container>
 </html>

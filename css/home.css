@@ -234,17 +234,3 @@ aside>ul {
   list-style-position: inside;
   columns: 2;
 }
-
-footer {
-  background-color: #252839;
-  color: white;
-  text-align: center;
-  font-size: 0.8em;
-  padding: 5px;
-}
-
-footer a {
-  color: white;
-  font-weight: bolder;
-  text-decoration: none;
-}
