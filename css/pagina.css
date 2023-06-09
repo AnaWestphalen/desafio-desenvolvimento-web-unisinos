@@ -1,0 +1,77 @@
+.bigbox {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  height: 215px;
+}
+
+.formulario {
+  background-color: #06865586;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+.comentario {
+  margin-top: 5px;
+  height: 200px;
+  width: 400px;
+}
+
+.comentario h2 {
+  font-family: var(--fonte-android);
+  color: #080808;
+  font-size: 18px;
+  text-align: center;
+}
+
+.send {
+  margin-top: 60px;
+  margin-left: 833px;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1329a1;
+  margin-bottom: 100px;
+}
+
+.btn-flat:hover {
+  background: #526af0;
+  color: white;
+}
+
+input[type="text"] {
+  width: 950px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+textarea {
+  width: 350px;
+  height: 150px;
+  padding: 10px;
+}
+
+main {
+  min-width: 300px;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main strong {
+  color: #000000;
+  font-weight: bold;
+  padding: 2px 6px;
+}

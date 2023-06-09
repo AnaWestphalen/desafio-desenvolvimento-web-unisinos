@@ -1,0 +1,28 @@
+footer {
+  background-color: #252839;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
