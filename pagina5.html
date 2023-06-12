@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AccessMonitor</title>
+    <title>AccessMonitor - Estatística</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/style_estatistica.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/pagina.css">
+    <script src="javascript/calculo.js"></script>
     <script src="https://kit.fontawesome.com/e1d8385e01.js" crossorigin="anonymous"></script>
   </head>
 
@@ -32,7 +34,156 @@
     </header>
 
     <main>
-
+        <h3>Estátistica geral das notificações</h3>
+        <div class="campo_simulacao">
+            <div><strong>OBSERVAÇÃO</strong></div>
+            <div>Estes botões simulam a entrada das notificações alterando numericamente os valores das tabelas.</div>
+            <div id="botoes">
+                <div>Deficientes Físicos <button class="botao_principal" id="aumentar_deficiente_fisico">+</button><button class="botao_principal" id="diminuir_deficiente_fisico">-</button><button class="botao_principal" id="zerar_deficiente_fisico">zerar</button></div>
+                <div>Deficientes Auditivos <button class="botao_principal" id="aumentar_deficiente_auditivo">+</button><button class="botao_principal" id="diminuir_deficiente_auditivo">-</button><button class="botao_principal" id="zerar_deficiente_auditivo">zerar</button></div>
+                <div>Deficientes Visuais <button class="botao_principal" id="aumentar_deficiente_visual">+</button><button class="botao_principal" id="diminuir_deficiente_visual">-</button><button class="botao_principal" id="zerar_deficiente_visual">zerar</button></div>
+            </div>
+        </div>
+        <div id="notificacoes">Total de notificações: <span id="total_de_notificacoes"></span></div>
+        <table border="1">
+            <tr>
+                <th>Categoria</th>
+                <th>Quantidade de Notificações</th>
+                <th>Percentual(%)</th>
+            </tr>
+            <tr>
+                <td>Deficiente Físico</td>
+                <td id="quantidade_deficiente_fisico"></td>
+                <td id="percentual_deficiente_fisico"></td>
+            </tr>
+            <tr>
+                <td>Deficiente Auditivo</td>
+                <td id="quantidade_deficiente_auditivo"></td>
+                <td id="percentual_deficiente_auditivo"></td>
+            </tr>
+            <tr>
+                <td>Deficiente Visual</td>
+                <td id="quantidade_deficiente_visual"></td>
+                <td id="percentual_deficiente_visual"></td>
+            </tr>
+        </table>
+        <h3>Tabela de problemas encontrados</h3>
+        <div>Quantidade de problemas de acessibilidade para pessoas com deficiência: <span id="total_deficientes_fisicos"></span></div>
+        <table border="1">
+            <tr>
+                <th>Categoria</th>
+                <th>Quantidade de Notificações</th>
+                <th>Percentual(%)</th>
+                <th>Simulação</th>
+            </tr>
+            <tr>
+                <td>Rampa destruída</td>
+                <td id="quantidade_rampa_destruida"></td>
+                <td id="percentual_rampa_destruida"></td>
+                <td><button id="adicionar_rampa_destruida">+</button><button id="diminuir_rampa_destruida">-</button></td>
+            </tr>
+            <tr>
+                <td>Ausência de rampa</td>
+                <td id="quantidade_ausencia_de_rampa"></td>
+                <td id="percentual_ausencia_de_rampa"></td>
+                <td><button id="adicionar_ausencia_de_rampa">+</button><button id="diminuir_ausencia_de_rampa">-</button></td>
+            </tr>
+            <tr>
+                <td>Calçada muito estreita</td>
+                <td id="quantidade_calcada_estreita"></td>
+                <td id="percentual_calcada_estreita"></td>
+                <td><button id="adicionar_calcada_estreita">+</button><button id="diminuir_calcada_estreita">-</button></td>
+            </tr>
+            <tr>
+                <td>Calçada esburacada</td>
+                <td id="quantidade_calcada_esburacada_fisico"></td>
+                <td id="percentual_calcada_esburacada_fisico"></td>
+                <td><button id="adicionar_calcada_esburacada_fisico">+</button><button id="diminuir_calcada_esburacada_fisico">-</button></td>
+            </tr>
+            <tr>
+                <td>Rua com trecho muito íngreme</td>
+                <td id="quantidade_rua_ingrime"></td>
+                <td id="percentual_rua_ingrime"></td>
+                <td><button id="adicionar_calcada_rua_ingrime">+</button><button id="diminuir_calcada_rua_ingrime">-</button></td>
+            </tr>
+            <tr>
+                <td>Ausência de vagas de estacionamento preferenciais</td>
+                <td id="quantidade_ausencia_vagas_estacionamento"></td>
+                <td id="percentual_ausencia_vagas_estacionamento"></td>
+                <td><button id="adicionar_calcada_ausencia_vagas_estacionamento">+</button><button id="diminuir_calcada_ausencia_vagas_estacionamento">-</button></td>
+            </tr>
+        </table>
+    
+        <div>Quantidade de problemas de acessibilidade para deficientes auditivos: <span id="total_deficientes_auditivos"></span></div>
+        <table border="1">
+            <tr>
+                <th>Categoria</th>
+                <th>Quantidade de Notificações</th>
+                <th>Percentual(%)</th>
+                <th>Simulação</th>
+            </tr>
+            <tr>
+                <td>Ausência de alertas visuais de emergências</td>
+                <td id="quantidade_ausencia_alerta_visual_emergencia"></td>
+                <td id="percentual_ausencia_alerta_visual_emergencia"></td>
+                <td><button id="adicionar_ausencia_alerta_visual_emergencia">+</button><button id="diminuir_ausencia_alerta_visual_emergencia">-</button></td>
+            </tr>
+            <tr>
+                <td>Ausência de placa informativa com o nome da rua</td>
+                <td id="quantidade_ausencia_placa_informativa_da_rua"></td>
+                <td id="percentual_ausencia_placa_informativa_da_rua"></td>
+                <td><button id="adicionar_ausencia_placa_informativa_da_rua">+</button><button id="diminuir_ausencia_placa_informativa_da_rua">-</button></td>
+            </tr>
+            <tr>
+                <td>Ausência de vagas de estacionamento preferenciais</td>
+                <td id="quantidade_ausencia_vagas_estacionamento_preferenciais"></td>
+                <td id="percentual_ausencia_vagas_estacionamento_preferenciais"></td>
+                <td><button id="adicionar_ausencia_vagas_estacionamento_preferenciais">+</button><button id="diminuir_ausencia_vagas_estacionamento_preferenciais">-</button></td>
+            </tr>
+        </table>
+    
+        <div>Quantidade de problemas de acessibilidade para deficientes visuais: <span id="total_deficientes_visuais"></span></div>
+        <table border="1">
+            <tr>
+                <th>Categoria</th>
+                <th>Quantidade de Notificações</th>
+                <th>Percentual(%)</th>
+                <th>Simulação</th>
+            </tr>
+            <tr>
+                <td>Ausência de piso podotáctil</td>
+                <td id="quantidade_ausencia_piso_podotactil"></td>
+                <td id="percentual_ausencia_piso_podotactil"></td>
+                <td><button id="adicionar_ausencia_piso_podotactil">+</button><button id="diminuir_ausencia_piso_podotactil">-</button></td>
+            </tr>
+            <tr>
+                <td>Piso podotáctil danificado</td>
+                <td id="quantidade_podotactil_danificado"></td>
+                <td id="percentual_podotactil_danificado"></td>
+                <td><button id="adicionar_podotactil_danificado">+</button><button id="diminuir_podotactil_danificado">-</button></td>
+            </tr>
+            <tr>
+                <td>Calçada esburacada</td>
+                <td id="quantidade_calcada_esburacada_visual"></td>
+                <td id="percentual_calcada_esburacada_visual"></td>
+                <td><button id="adicionar_calcada_esburacada_visual">+</button><button id="diminuir_calcada_esburacada_visual">-</button></td>
+            </tr>
+            <tr>
+                <td>Ausência de marcações em braile no transporte público</td>
+                <td id="quantidade_ausencia_marcacao_braile"></td>
+                <td id="percentual_ausencia_marcacao_braile"></td>
+                <td><button id="adicionar_ausencia_marcacao_braile">+</button><button id="diminuir_ausencia_marcacao_braile">-</button></td>
+            </tr>
+            <tr>
+                <td>Calçada obstruída</td>
+                <td id="quantidade_calcada_obstruida"></td>
+                <td id="percentual_calcada_obstruida"></td>
+                <td><button id="adicionar_calcada_obstruida">+</button><button id="diminuir_calcada_obstruida">-</button></td>
+            </tr>
+        </table>
+        <div class="send">
+            <a class="btn-flat" href="home.html">Ir à home</a>
+          </div>
     </main>
 
     <footer>
