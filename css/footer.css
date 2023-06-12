@@ -13,6 +13,15 @@ footer p {
   margin: 0 auto;
 }
 
+.container a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.container a:hover {
+  color: #64277cc5;
+}
+
 .social-icons {
   margin-top: 10px;
 }
