@@ -32,7 +32,7 @@
 
 .btn-flat {
   color: white;
-  padding: 8px 24px;
+  padding: 8px 13px;
   border-radius: 4px;
   background: #1329a1;
   margin-bottom: 100px;
@@ -74,4 +74,17 @@ main strong {
   color: #000000;
   font-weight: bold;
   padding: 2px 6px;
+}
+
+.btn-home {
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  background: #1329a1;
+  margin-bottom: 100px;
+}
+
+.btn-home:hover {
+  background: #526af0;
+  color: white;
 }
