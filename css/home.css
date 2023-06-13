@@ -89,14 +89,22 @@ nav {
 	font-weight: normal;
 	font-size: 1.8em;
   }
-  
+
   main h2 {
 	color: #252839;
 	font-size: 1.3em;
 	background-image: linear-gradient(to right, var(--cor1), transparent);
 	text-indent: 8px;
   }
-  
+
+  main h4 {
+    color: #0c2eeb;
+    font-size: 1.05em;
+    text-align: center;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+  }
+
   main p {
 	margin: 15px 0px;
 	text-align: justify;
@@ -104,13 +112,13 @@ nav {
 	line-height: 2em;
 	font-size: 1em;
   }
-  
+
   main strong {
 	color: #252839;
 	font-weight: bold;
 	padding: 2px 6px;
   }
-  
+
   main a {
 	text-decoration: none;
 	font-weight: bold;
@@ -118,22 +126,22 @@ nav {
 	background-color: #252839;
 	padding: 2px 6px;
   }
-  
+
   main a:hover {
 	text-decoration: underline;
 	color: #252839;
   }
-  
+
   main img {
 	width: 100%;
   }
-  
+
   main img.pequena {
 	max-width: 350px;
 	display: block;
 	margin: auto;
   }
-  
+
   div.video {
 	background-color: #252839;
 	margin: 0px -20px 30px -20px;
@@ -141,7 +149,7 @@ nav {
 	padding-bottom: 59%;
 	position: relative;
   }
-  
+
   div.video>iframe {
 	position: absolute;
 	top: 5%;
@@ -149,14 +157,14 @@ nav {
 	width: 90%;
 	height: 90%;
   }
-  
+
   aside {
 	background-color: #2528394f;
 	padding: 10px;
 	border-radius: 10px;
 	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
   }
-  
+
   aside>h3 {
 	background-color: #252839;
 	color: white;
@@ -164,11 +172,26 @@ nav {
 	margin: -10px -10px 0px -10px;
 	border-radius: 10px 10px 0px 0px;
   }
-  
+
   aside>ul {
 	list-style-type: '\2714\00A0\00A0';
 	list-style-position: inside;
 	columns: 2;
   }
 
+  .access-icons {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #0c2eeb;
+  }
 
+  .access-icons a {
+    color: #252839;
+    font-size: 18px;
+    margin-right: 10px;
+    background-color: transparent;
+  }
+
+  .access-icons a:hover {
+    color: #0c2eeb;
+  }
