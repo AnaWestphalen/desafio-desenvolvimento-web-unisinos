@@ -13,7 +13,12 @@
 	align-items: center;
 }
 
+.cabecalho img {
+	width: 50%;
+}
+
 .nomeSite {
+	display: flex;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 50px;
 }
